@@ -21,7 +21,7 @@ A sophisticated task management application that converts natural language into 
 ```
 Good morning everyone. Let's review our action items from today's meeting. 
 
-Aman, you need to take the landing page by 10pm tomorrow. Make sure it's mobile responsive.
+Raj, please handle the client follow-up by Wednesday. The client seemed interested in our new features.
 
 Shreya, could you review the marketing deck tonight? We need your feedback before the presentation.
 
