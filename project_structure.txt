@@ -1,0 +1,36 @@
+project_root/
+├── README.md           # Project documentation
+├── requirements.txt     # Python dependencies
+├── .gitignore          # Git ignore file
+│
+├── src/               # Source code
+│   ├── __init__.py
+│   ├── main.py         # Main application entry point
+│   ├── config.py       # Configuration settings
+│   ├── models/         # Database models
+│   │   ├── __init__.py
+│   │   └── todo.py
+│   │
+│   ├── routes/        # API routes
+│   │   ├── __init__.py
+│   │   └── todo_routes.py
+│   │
+│   └── utils/         # Utility functions
+│       ├── __init__.py
+│       └── helpers.py
+│
+├── tests/             # Test files
+│   ├── __init__.py
+│   ├── test_models.py
+│   └── test_routes.py
+│
+├── static/            # Static files (CSS, JS, images)
+│   ├── css/
+│   ├── js/
+│   └── images/
+│
+└── templates/         # HTML templates
+    ├── base.html
+    └── todo/
+        ├── list.html
+        └── detail.html
