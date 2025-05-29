@@ -45,11 +45,61 @@ Here's how the tasks appear in the application:
 🔄 Complete budget analysis report
    Friday 5:00 PM • Sarah • P2
 ```
-![alt text](image.png)
+![alt text](image-3.png)
 ![alt text](image-1.png)
 ![alt text](image-2.png)
 
 
+## 📡 API Reference
+
+### Create a New Task
+
+Create a new task using natural language processing.
+
+**Endpoint**
+```
+POST /api/tasks
+```
+
+**Request**
+```http
+POST http://localhost:5000/api/tasks
+Content-Type: application/json
+
+{
+  "text": "Mike from the design team, can you update the mockups? I think he's not in our main team but works with us."
+}
+```
+
+**Response**
+```http
+HTTP/1.1 201 Created
+Content-Type: application/json
+
+{
+  "description": "Update design mockups",
+  "assignee": "Mike",
+  "dueDate": "2025-05-29T11:30:00.000Z",
+  "priority": "P3",
+  "completed": false,
+  "status": "pending",
+  "_id": "683834847dfd80c2c20abd93",
+  "createdAt": "2025-05-29T10:18:44.145Z",
+  "updatedAt": "2025-05-29T10:18:44.145Z",
+  "__v": 0
+}
+```
+
+**Response Fields**
+- `description`: Extracted task description
+- `assignee`: Person responsible for the task
+- `dueDate`: Due date in ISO format
+- `priority`: Task priority (P1-P4)
+- `completed`: Boolean indicating completion status
+- `status`: Current status of the task
+- `_id`: Unique identifier for the task
+- `createdAt`: Timestamp when the task was created
+- `updatedAt`: Timestamp when the task was last updated
 
 ## 🛠️ Tech Stack
 
@@ -143,6 +193,7 @@ Use natural language to add tasks. The AI will automatically extract:
 - ✏️ **Edit**: Click the edit icon
 - 🗑️ **Delete**: Click the trash icon
 - 🔄 **Refresh**: Tasks auto-save and sync
+
 
 
 ## 🏗 Project Structure
